@@ -13,6 +13,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -22,6 +24,7 @@ public class EditAdapter extends RecyclerView.Adapter<EditAdapter.ViewHolder>  {
     Uri myUri;
     String uri,title,manufacturer,category,key;
     int numStock,price;
+    DatabaseReference fireDB;
 
 
 
@@ -87,6 +90,20 @@ public class EditAdapter extends RecyclerView.Adapter<EditAdapter.ViewHolder>  {
 
             }
         });
+
+        holder.deleteButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                StockItem stockItems = stockItem.get(position);
+
+                fireDB= FirebaseDatabase.getInstance().getReference("StockItem");
+                fireDB.child(stockItems.getKey()).removeValue();
+
+
+
+            }
+        });
     }
 
     @Override
@@ -97,7 +114,7 @@ public class EditAdapter extends RecyclerView.Adapter<EditAdapter.ViewHolder>  {
     public static class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         public TextView stockTitleText, stockCatText, stockManText, stockPriceText, numStockText;
         public ImageView image;
-        public Button editButton;
+        public Button editButton, deleteButton;
 
         public ViewHolder(@NonNull final View itemView) {
             super(itemView);
@@ -109,6 +126,7 @@ public class EditAdapter extends RecyclerView.Adapter<EditAdapter.ViewHolder>  {
             image = (ImageView)itemView.findViewById(R.id.image);
             numStockText =(TextView) itemView.findViewById(R.id.numStockText);
             editButton = (Button) itemView.findViewById(R.id.editButton);
+            deleteButton = (Button) itemView.findViewById(R.id.deleteButton);
 
         }
 
