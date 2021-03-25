@@ -71,7 +71,7 @@ public class NonAdminHomeActivity extends AppCompatActivity {
         // Handle item selection
         switch (item.getItemId()) {
             case R.id.item1:
-                Intent i = new Intent(NonAdminHomeActivity.this, ViewCustomerActivity.class);
+                Intent i = new Intent(NonAdminHomeActivity.this, UserInfoActivity.class);
                 startActivity(i);
                 return true;
         }

@@ -107,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
 
         userID = mAuth.getCurrentUser().getUid();
 
-        User user = new User(name, email,password, id,admin);
+        User user = new User(name, email,password, id,admin,null,null);
         reference = FirebaseDatabase.getInstance().getReference().child("User").child(userID);
 
 

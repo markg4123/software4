@@ -79,35 +79,35 @@ public class LoginActivity extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (!task.isSuccessful()) {
                                 Toast.makeText(LoginActivity.this, "Login Error Please Try Again", Toast.LENGTH_LONG).show();
-                            }
-                            userRef.addValueEventListener(new ValueEventListener() {
-                                @Override
-                                public void onDataChange(DataSnapshot dataSnapshot) {
-                                    for (DataSnapshot u : dataSnapshot.getChildren()) {
-                                        userID = mAuth.getCurrentUser().getUid();
+                            }else {
+                                userRef.addValueEventListener(new ValueEventListener() {
+                                    @Override
+                                    public void onDataChange(DataSnapshot dataSnapshot) {
+                                        for (DataSnapshot u : dataSnapshot.getChildren()) {
+                                            userID = mAuth.getCurrentUser().getUid();
 
-                                        User user = u.getValue(User.class);
-                                        if(userID.equals(user.getId())) {
-                                            if (user.getAdmin().equals("Admin User")) {
-                                                Intent intent1 = new Intent(LoginActivity.this, AdminHomeActivity.class);
-                                                startActivity(intent1);
-                                            }
-                                            if (user.getAdmin().equals("Standard User")) {
-                                                Intent intent1 = new Intent(LoginActivity.this, NonAdminHomeActivity.class);
-                                                startActivity(intent1);
+                                            User user = u.getValue(User.class);
+                                            if (userID.equals(user.getId())) {
+                                                if (user.getAdmin().equals("Admin User")) {
+                                                    Intent intent1 = new Intent(LoginActivity.this, AdminHomeActivity.class);
+                                                    startActivity(intent1);
+                                                }
+                                                if (user.getAdmin().equals("Standard User")) {
+                                                    Intent intent1 = new Intent(LoginActivity.this, NonAdminHomeActivity.class);
+                                                    startActivity(intent1);
+                                                }
                                             }
                                         }
                                     }
-                                }
 
-                                @Override
-                                public void onCancelled(DatabaseError error) {
-                                    // Failed to read value
-                                    Toast.makeText(LoginActivity.this, "Error", Toast.LENGTH_LONG).show();
-                                }
-                            });
+                                    @Override
+                                    public void onCancelled(DatabaseError error) {
+                                        // Failed to read value
+                                        Toast.makeText(LoginActivity.this, "Error", Toast.LENGTH_LONG).show();
+                                    }
+                                });
 
-
+                            }
                         }
                     });
 

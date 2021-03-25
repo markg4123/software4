@@ -1,16 +1,18 @@
 package com.example.softwarepatterns;
 
 public class User {
-    String name, email, password, id, admin;
+    String name, email, password, id, admin, address, paymentMethod;
     public User(){
 
     }
-    public User(String name, String email, String password, String id,String admin){
+    public User(String name, String email, String password, String id,String admin, String address, String paymentMethod){
         this.name = name;
         this.email = email;
         this.password = password;
         this.id = id;
         this.admin = admin;
+        this.address = address;
+        this.paymentMethod = paymentMethod;
     }
 
     public String getName() {
@@ -51,6 +53,22 @@ public class User {
 
     public void setAdmin(String admin) {
         this.admin = admin;
+    }
+
+    public String getPaymentMethod() {
+        return paymentMethod;
+    }
+
+    public void setPaymentMethod(String paymentMethod) {
+        this.paymentMethod = paymentMethod;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     @Override
