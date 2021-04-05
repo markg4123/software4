@@ -88,7 +88,7 @@ public class AddItemActivity extends AppCompatActivity {
                             if (task.isSuccessful()) {
                                 Toast.makeText(AddItemActivity.this, "Your Item Has Been Created", Toast.LENGTH_LONG).show();
                                 adapter = new Adapter(stockItems);
-                                Intent i = new Intent(AddItemActivity.this, EditActivity.class);
+                                Intent i = new Intent(AddItemActivity.this, AdminHomeActivity.class);
                                 startActivity(i);
                             } else {
                                 Toast.makeText(AddItemActivity.this, "Your Item Has Not Been Created", Toast.LENGTH_LONG).show();

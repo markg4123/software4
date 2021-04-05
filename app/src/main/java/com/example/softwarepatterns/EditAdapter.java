@@ -85,7 +85,6 @@ public class EditAdapter extends RecyclerView.Adapter<EditAdapter.ViewHolder>  {
                 i.putExtra("uri", myUri);
                 i.putExtra("key", key);
 
-
                 v.getContext().startActivity(i);
 
             }

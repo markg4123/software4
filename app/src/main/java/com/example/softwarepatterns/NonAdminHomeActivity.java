@@ -31,6 +31,7 @@ public class NonAdminHomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_non_admin_home);
 
+
         rcv3 = findViewById(R.id.rcv3);
         rcv3.setHasFixedSize(true);
         rcv3.setLayoutManager(new LinearLayoutManager(this));
@@ -73,6 +74,10 @@ public class NonAdminHomeActivity extends AppCompatActivity {
             case R.id.item1:
                 Intent i = new Intent(NonAdminHomeActivity.this, UserInfoActivity.class);
                 startActivity(i);
+                return true;
+            case R.id.item2:
+                Intent ii = new Intent(NonAdminHomeActivity.this, CartActivity.class);
+                startActivity(ii);
                 return true;
         }
         return super.onOptionsItemSelected(item);
