@@ -38,12 +38,12 @@ public class ViewCustomerActivity extends AppCompatActivity {
 
                     User user = s.getValue(User.class);
 
-
-                    users.add(user);
-                    adapter = new UserAdapter(users);
-                    userRcv.setAdapter(adapter);
-                    adapter.notifyItemInserted(users.size() - 1);
-
+                    if(user.getAdmin().equals("Standard User")) {
+                        users.add(user);
+                        adapter = new UserAdapter(users);
+                        userRcv.setAdapter(adapter);
+                        adapter.notifyItemInserted(users.size() - 1);
+                    }
                 }
             }
 

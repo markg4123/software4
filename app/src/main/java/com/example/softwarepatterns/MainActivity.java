@@ -104,10 +104,12 @@ public class MainActivity extends AppCompatActivity {
         String email = emailText.getText().toString();
         String password = passwordText.getText().toString();
         String id = mAuth.getCurrentUser().getUid();
+        String paymentMethod = "";
+        String address = "";
 
         userID = mAuth.getCurrentUser().getUid();
 
-        User user = new User(name, email,password, id,admin,null,null);
+        User user = new User(name, email,password, id,admin,address,paymentMethod);
         reference = FirebaseDatabase.getInstance().getReference().child("User").child(userID);
 
 

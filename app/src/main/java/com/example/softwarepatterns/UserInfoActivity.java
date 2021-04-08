@@ -54,6 +54,8 @@ public class UserInfoActivity extends AppCompatActivity {
 
                         userNameText.setText(users.getName());
                         userEmailText.setText((users.getEmail()));
+                        paymentText.setText(users.getPaymentMethod());
+                        addressText.setText(users.getAddress());
 
 
                     }
@@ -85,7 +87,7 @@ public class UserInfoActivity extends AppCompatActivity {
 
                 fireDB.child("name").setValue(name);
                 fireDB.child("email").setValue(email);
-                fireDB.child("payment").setValue(payment);
+                fireDB.child("paymentMethod").setValue(payment);
                 fireDB.child("address").setValue(address);
 
                 Toast.makeText(UserInfoActivity.this, "User profile updated!", Toast.LENGTH_LONG).show();

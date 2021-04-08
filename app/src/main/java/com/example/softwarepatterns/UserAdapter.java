@@ -30,7 +30,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(@NonNull UserAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull UserAdapter.ViewHolder holder, final int position) {
         User user= users.get(position);
 
         holder.nameText.setText("Name: "+ user.getName() +"\n");
@@ -41,7 +41,11 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
         holder.orderButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                User user= users.get(position);
+                String id = user.getId();
+
                 Intent i = new Intent(v.getContext(), OrderHistoryActivity.class);
+                i.putExtra("id", id);
                 v.getContext().startActivity(i);
             }
         });
