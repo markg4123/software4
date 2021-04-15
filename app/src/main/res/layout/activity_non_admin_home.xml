@@ -35,6 +35,7 @@
         android:id="@+id/searchButton2"
         android:layout_width="124dp"
         android:layout_height="43dp"
+        android:background="#7FB6E1"
         android:text="Search"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

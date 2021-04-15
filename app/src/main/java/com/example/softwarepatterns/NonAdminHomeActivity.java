@@ -332,6 +332,11 @@ public class NonAdminHomeActivity extends AppCompatActivity {
                 Intent ii = new Intent(NonAdminHomeActivity.this, CartActivity.class);
                 startActivity(ii);
                 return true;
+            case R.id.item3:
+                Intent iii = new Intent(NonAdminHomeActivity.this, LoginActivity.class);
+                startActivity(iii);
+                return true;
+
         }
         return super.onOptionsItemSelected(item);
     }

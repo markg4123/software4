@@ -39,7 +39,7 @@ public class CartActivity extends AppCompatActivity {
     String userId;
     FirebaseUser user;
     FirebaseAuth mAuth;
-    DatabaseReference reference, cartRef, userRef;
+    DatabaseReference reference, cartRef, userRef, stockRef;
 
     ArrayList<CartItem> items = new ArrayList<>();
     ArrayList<Order> orders = new ArrayList<>();

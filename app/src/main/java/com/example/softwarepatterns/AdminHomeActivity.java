@@ -149,6 +149,10 @@ public class AdminHomeActivity extends AppCompatActivity {
                 Intent ii = new Intent(AdminHomeActivity.this, AddItemActivity.class);
                 startActivity(ii);
                 return true;
+            case R.id.item3:
+                Intent iii = new Intent(AdminHomeActivity.this, LoginActivity.class);
+                startActivity(iii);
+                return true;
         }
         return super.onOptionsItemSelected(item);
     }

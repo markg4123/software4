@@ -32,7 +32,7 @@ public class CustomerAdapter extends RecyclerView.Adapter<CustomerAdapter.ViewHo
     ArrayList<CartItem> cartItems = new ArrayList<>();
     Uri myUri;
     String uri;
-    DatabaseReference reference;
+    DatabaseReference reference, stockRef;
     FirebaseAuth mAuth;
     StorageReference mStorageRef;
 
@@ -86,6 +86,11 @@ public class CustomerAdapter extends RecyclerView.Adapter<CustomerAdapter.ViewHo
             public void onClick(final View v) {
                 String title = stockItems.getTitle();
                 int price = stockItems.getPrice();
+
+                stockRef = FirebaseDatabase.getInstance().getReference().child("StockItem").child(stockItems.getKey());
+
+                int reduceStockBy1 = (stockItems.getNumStock()-1);
+                stockRef.child("numStock").setValue(reduceStockBy1);
 
                 mAuth = FirebaseAuth.getInstance();
                 reference = FirebaseDatabase.getInstance().getReference().child("CartItem").push();
