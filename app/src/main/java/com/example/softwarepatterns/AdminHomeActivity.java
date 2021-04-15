@@ -39,6 +39,7 @@ public class AdminHomeActivity extends AppCompatActivity {
         rcv2 = findViewById(R.id.rcv2);
         rcv2.setHasFixedSize(true);
         rcv2.setLayoutManager(new LinearLayoutManager(this));
+
         searchText = findViewById(R.id.searchText);
         searchButton = findViewById(R.id.searchButton);
 

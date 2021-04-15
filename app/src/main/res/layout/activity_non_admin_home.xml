@@ -3,16 +3,79 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/backgroundsoftwarepatterns2"
     android:layout_height="match_parent"
     tools:context=".NonAdminHomeActivity">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rcv3"
-        android:layout_width="317dp"
-        android:layout_height="482dp"
+    <Button
+        android:id="@+id/decendingButton"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:background="@drawable/ic_baseline_arrow_downward_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.98"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.662" />
+        app:layout_constraintVertical_bias="0.107" />
+
+    <Button
+        android:id="@+id/accendingButton"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:background="@drawable/ic_baseline_arrow_upward_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.784"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.107" />
+
+    <Button
+        android:id="@+id/searchButton2"
+        android:layout_width="124dp"
+        android:layout_height="43dp"
+        android:text="Search"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <EditText
+        android:id="@+id/searchText2"
+        android:layout_width="221dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:hint="Seach here..."
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.156"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcv3"
+        android:layout_width="318dp"
+        android:layout_height="380dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.794" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="221dp"
+        android:layout_height="45dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.165"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.109" />
 </androidx.constraintlayout.widget.ConstraintLayout>

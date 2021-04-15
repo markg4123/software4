@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backgroundsoftwarepatterns2"
     tools:context=".AdminHomeActivity">
 
     <androidx.recyclerview.widget.RecyclerView
@@ -23,8 +24,8 @@
 
     <EditText
         android:id="@+id/searchText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="218dp"
+        android:layout_height="51dp"
         android:ems="10"
         android:hint="Seach here..."
         android:inputType="textPersonName"
@@ -46,4 +47,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.023" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
