@@ -9,16 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".OrderHistoryActivity"></activity>
+        <activity android:name=".OrderHistoryActivity" />
         <activity android:name=".CartActivity" />
         <activity android:name=".ReviewActivity" />
         <activity android:name=".UserInfoActivity" />
         <activity android:name=".ViewCustomerActivity" />
-        <activity android:name=".NonAdminHomeActivity"
-            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name=".NonAdminHomeActivity"
+            android:windowSoftInputMode="adjustPan" />
         <activity android:name=".EditActivity" />
-        <activity android:name=".AdminHomeActivity"
-            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name=".AdminHomeActivity"
+            android:windowSoftInputMode="adjustPan" />
         <activity android:name=".AddItemActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".MainActivity">

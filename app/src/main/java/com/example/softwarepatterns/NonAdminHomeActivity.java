@@ -147,7 +147,7 @@ public class NonAdminHomeActivity extends AppCompatActivity {
 
 
         //descending on click listener
-        ascendingButton.setOnClickListener(new View.OnClickListener() {
+        descendingButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 

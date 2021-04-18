@@ -7,10 +7,45 @@
     android:background="@drawable/backgroundsoftwarepatterns2"
     tools:context=".AdminHomeActivity">
 
+    <Button
+        android:id="@+id/decendingButton2"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:background="@drawable/ic_baseline_arrow_downward_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.98"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.107" />
+
+    <Button
+        android:id="@+id/accendingButton2"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:background="@drawable/ic_baseline_arrow_upward_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.784"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.107" />
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="221dp"
+        android:layout_height="45dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.165"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.109" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcv2"
-        android:layout_width="323dp"
-        android:layout_height="489dp"
+        android:layout_width="329dp"
+        android:layout_height="363dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginEnd="6dp"
